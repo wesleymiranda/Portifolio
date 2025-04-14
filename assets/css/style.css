@@ -1,0 +1,189 @@
+
+/*----------------------------------------------------------------
+Variáveis Globais
+------------------------------------------------------------------*/
+
+/* Fontes */
+:root {
+    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+}
+
+/*Cores*/
+
+:root {
+    --background-color: #f3f4f6;
+    --default-color: #002222;
+    --heading-color: #050505;
+    --accent-color: #04f2eb;
+}
+
+
+/*-- Cores do Menu */
+:root {
+    --nav-color: #f3f4f6;
+    --nav-headr-color: #ffffff;
+    --mobile-dropdown-color: #204044;
+    --nav-dropdown-background-color: #204044;
+    --nav-dropdown-color: #c5b4ac;
+    --nav-dropdown-hover-color: #c5b4ac;
+}
+
+.dark-background {
+    --background-color: #204044;
+    --default-color: #f3f4f6;
+    --heading-color: #f3f4f6;
+    --contrast-color: #c5b4ac;
+    --surface-color: #08a49f;
+}
+
+.light-back{
+    --backgroung-color: #f3f4f6;
+    --surface-color: #ffffff;
+}
+
+
+
+
+/*-----------------------------------------------------------------
+Estilos Globais
+------------------------------------------------------------------*/
+body {
+
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 35%);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+}
+
+
+
+
+/*-------------------------------------------------------------------
+Estilos do Cabeçalho
+---------------------------------------------------------------------*/
+
+.header {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 300px; 
+    transition: all 0.3s ease-in-out; 
+    overflow-y: auto; 
+    padding: 1rem 2rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+} 
+
+.header .profile-img img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 5px solid color-mix(in srgb, var(--default-color), transparent 65%);
+
+}
+
+.header .logo {
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+
+.header .logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-align: center;
+    margin: 0;
+}
+
+.header .social-icons {
+    margin: 0 0 15px 0;
+}
+
+.header .social-icons a {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.header .social-icons .bi {
+    font-size: 25px;
+}
+
+/*----------------------------------------------------------------------
+Menu de Navegação
+--------------------------------------------------------------------------*/
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.navmenu {
+    padding: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+
+}
+
+.navmenu ul {
+    list-style: none;
+    padding: 0 0 20px 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navmenu a {
+    color: var(--nav-color);
+    font-family: var(--nav-font);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+
+    border-radius: 2%;
+    width: 100%;
+    height: 40px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+
+    margin: 5px;
+
+}
+
+.navmenu i{
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+    color: var(--nav-color);
+}
